@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify, render_template
+from flask import Flask, request, jsonify
 
 app = Flask(__name__)
 
@@ -10,9 +10,47 @@ def index():
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>21BCE9261</title>
+    <title>21BCE9779</title>
     <style>
-        /* (Your existing CSS here) */
+        /* Add your CSS styling here */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f7f7f7;
+        }
+        h1 {
+            color: #333;
+        }
+        textarea {
+            width: 100%;
+            padding: 10px;
+            font-size: 14px;
+        }
+        button {
+            margin-top: 10px;
+            padding: 10px 15px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        select {
+            margin-top: 10px;
+            padding: 10px;
+            font-size: 16px;
+        }
+        pre {
+            background-color: #efefef;
+            padding: 15px;
+            border-radius: 5px;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+        .hidden {
+            display: none;
+        }
     </style>
 </head>
 <body>
@@ -27,7 +65,7 @@ def index():
             <select id="responseFilter" multiple>
                 <option value="numbers">Numbers</option>
                 <option value="alphabets">Alphabets</option>
-                <option value="highest_alphabet">Highest Lowercase Alphabet</option>
+                <option value="highest_lowercase_alphabet">Highest Lowercase Alphabet</option>
             </select>
             <button type="button" onclick="filterResponse()">Show Data</button>
         </div>
@@ -75,6 +113,7 @@ def index():
                 }
             });
 
+            // Update the display with the filtered data
             document.getElementById('responseData').textContent = JSON.stringify(filteredData, null, 2);
         }
     </script>
@@ -97,9 +136,9 @@ def post_bfhl():
 
     response = {
         "is_success": True,
-        "user_id": "abhiram_rayidi",
-        "email": "ahiram.21bce9261@vitapstudent.ac.in",
-        "roll_number": "21BCE9261",
+        "user_id": "rahulch",
+        "email": "rahul.21bce9779@vitapstudent.ac.in",
+        "roll_number": "21BCE9779",
         "numbers": numbers,
         "alphabets": alphabets,
         "highest_lowercase_alphabet": highest_lowercase_alphabet
